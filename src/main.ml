@@ -35,7 +35,7 @@ let rec collisionCheckTicker game = fun ~value ->
 let initDisplay ~w ~h ~title =
   Glut.initDisplayMode ~double_buffer:true ~depth:true ~alpha:true ();
   Glut.initWindowSize ~w ~h;
-  Glut.createWindow ~title;
+  ignore(Glut.createWindow ~title);
   Glut.idleFunc ~cb:(Some Glut.postRedisplay)
 
 let initView ~w ~h =
